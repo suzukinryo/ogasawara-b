@@ -8,7 +8,6 @@ $dbPass = 'pass';
 
 //データベースへの接続
 $db = new PDO($dsn, $dbUser, $dbPass);
-
 //検索実行
 $sql = 'select * from mytable';
 $prepare = $db->prepare($sql);

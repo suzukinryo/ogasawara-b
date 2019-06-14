@@ -6,7 +6,7 @@
   </head>
   <body>
 <?php
-echo 'Hello,' . $_GET['foo']. ',' .$_GET['bar'];
+echo 'Hello,' . $_GET['foo']. '!,' .$_GET['bar'];
 ?>
   </body>
 </html>
