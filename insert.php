@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 //データベース接続設定
 $dbServer = '127.0.0.1';
 $dbName = 'mydb';
@@ -19,6 +19,7 @@ $prepare->bindValue(':X', $v1, PDO::PARAM_STR);
 $prepare->bindValue(':Y', $v2, PDO::PARAM_INT);
 $prepare->execute();
 ?>
+
 
 <!---結果の確認-->
 <a href="all.php">全件表示</a>
