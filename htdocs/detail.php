@@ -1,6 +1,7 @@
 <?php
  $id = $_GET['cid'];
  ?>
+
 <?php
 //データベース接続設定
 $dbServer = '127.0.0.1';
@@ -19,7 +20,7 @@ $record = $stmt->fetch();
 //結果の出力
 $food=$record['foodname']; 
 $zairyou=$record['material'];
-$calories=$record['calories'];
+$calories=$record['Calories'];
 $eiyou=$record['balance'];
 $tukurikata=$record['recipe'];
 ?>
@@ -31,34 +32,47 @@ $tukurikata=$record['recipe'];
   <title>調理方法表示画面</title>
   <link rel="stylesheet" href="box.css">
 </head>
-<body>  
+<body>
+<center><h1>調理方法</h1></center>  
+
   <div class="box1">
+    <h3>料理名</h3>
+    <div class="inner">
     <?php
     echo $food;
     ?>
+    </div>
   </div>
 
   <div class="box2">
-  <img src="./gazou.php ?id"=<?php echo $id; ?>>
-  
+  <h5>料理画像</h5>
+  <div class="inner2">
+  <img src="./gazou.php ?id=<?php echo $id; ?>">
+  </div>
   </div>
 
   <div class="box3">
+    <h5>材料・カロリー・栄養バランス</h5>
+    <div class="inner3">
   <?php
    echo $zairyou;
    echo "<br/>";
-   echo $calories;
+   echo "カロリー".$calories;
    echo "<br/>";
-  echo $eiyou;
+   echo "栄養評価".$eiyou;
    echo "<br/>";
   ?>
   </div>
+  </div>
 
   <div class="box4">
+  <h4>作り方</h4>
+  <div class="inner4">
   <?php
    echo $tukurikata;
   ?>
   </div>
+</div>
 
 </body>
 </html>
