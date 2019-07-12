@@ -78,7 +78,7 @@ $tukurikata=$record['recipe'];
 </html>
 
 
-  <p><center><input type="button" value="トップに戻る" onClick="location.href='./index.php'"></a></center></p>
+  <p><center><input type="button" value="トップに戻る" onClick="location.href='./index.html'"></a></center></p>
   <p><center><input type="button" value="献立提案画面に戻る" onclick=history.back()></a></center></p>
 
 </body>
