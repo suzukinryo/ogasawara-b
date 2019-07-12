@@ -1,7 +1,6 @@
 <?php
  $id = $_GET['cid'];
  ?>
-
 <?php
 //データベース接続設定
 $dbServer = '127.0.0.1';
@@ -32,47 +31,34 @@ $tukurikata=$record['recipe'];
   <title>調理方法表示画面</title>
   <link rel="stylesheet" href="box.css">
 </head>
-<body>
-<center><h1>調理方法</h1></center>  
-
+<body>  
   <div class="box1">
-    <h3>料理名</h3>
-    <div class="inner">
     <?php
     echo $food;
     ?>
-    </div>
   </div>
 
   <div class="box2">
-  <h5>料理画像</h5>
-  <div class="inner2">
-  <img src="./gazou.php ?id=<?php echo $id; ?>">
-  </div>
+  <img src="./gazou.php ?id"=<?php echo $id; ?>>
+  
   </div>
 
   <div class="box3">
-    <h5>材料・カロリー・栄養バランス</h5>
-    <div class="inner3">
   <?php
    echo $zairyou;
    echo "<br/>";
    echo $calories;
    echo "<br/>";
-   echo $eiyou;
+  echo $eiyou;
    echo "<br/>";
   ?>
   </div>
-  </div>
 
   <div class="box4">
-  <h4>作り方</h4>
-  <div class="inner4">
   <?php
    echo $tukurikata;
   ?>
   </div>
-</div>
 
 </body>
 </html>
